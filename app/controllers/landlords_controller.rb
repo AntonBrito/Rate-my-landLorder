@@ -15,7 +15,7 @@ class LandlordsController < OpenReadController
 
   # POST /landlords
   def create
-    @landlord = Landlord.new(landlord_params)
+    @landlord = current_user.landlords.build(landlord_params)
 
     if @landlord.save
       render json: @landlord, status: :created, location: @landlord

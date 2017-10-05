@@ -9,8 +9,7 @@ curl "${API}${URL_PATH}/${ID}" \
   --data '{
     "landlord": {
       "firstname": "'"${FIRSTNAME}"'",
-      "address": "'"${ADDRESS}"'",
-      "user_id": "'"${USER_ID}"'"
+      "address": "'"${ADDRESS}"'"
     }
   }'
 

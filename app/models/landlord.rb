@@ -1,4 +1,4 @@
 class Landlord < ApplicationRecord
-  belongs_to :user, dependent: :delete
+  belongs_to :user, dependent: :destroy
   has_many :comments
 end

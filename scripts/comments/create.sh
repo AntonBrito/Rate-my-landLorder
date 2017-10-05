@@ -1,9 +1,5 @@
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/comments"
-SUBJECT=${TITLE}
-RATE=3
-COMMENT=${COMMENT}
-
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \
@@ -14,11 +10,8 @@ curl "${API}${URL_PATH}" \
       "subject": "'"${SUBJECT}"'",
       "rate": "'"${RATE}"'",
       "comment": "'"${COMMENT}"'",
-      "landlord_id": "'"${LANDLORD_ID}"'",
-      "user_id": "'"${USER_ID}"'"
+      "landlord_id": "'"${LANDLORD_ID}"'"
     }
   }'
-
-       sh scripts/comments/update.sh
 
 echo

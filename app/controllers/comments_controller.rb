@@ -1,5 +1,5 @@
 class CommentsController < OpenReadController
-  before_action :set_comment, only: [:update, :destroy]
+  before_action :set_comment, only: [:show, :update, :destroy]
 
   # GET /comments
   def index
@@ -15,7 +15,7 @@ class CommentsController < OpenReadController
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
+    @comment = Comment.new.current_user.(comment_params)
 
     if @comment.save
       render json: @comment, status: :created, location: @comment

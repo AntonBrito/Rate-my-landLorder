@@ -1,4 +1,4 @@
-class LandlordsController < ApplicationController
+class LandlordsController < OpenReadController
   before_action :set_landlord, only: [:show, :update, :destroy]
 
   # GET /landlords

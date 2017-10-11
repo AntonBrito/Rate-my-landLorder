@@ -8,6 +8,12 @@ class LandlordsController < OpenReadController
     render json: @landlords
   end
 
+  def mylandlords
+    @my_landlords = current_user.landlords
+
+    render json: @myLandlords
+  end
+
   # GET /landlords/1
   def show
     render json: @landlord

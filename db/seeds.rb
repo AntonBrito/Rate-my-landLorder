@@ -10,6 +10,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: 'AntonBrito@gmail.com', password: '123', admin: true)
+User.create(email: 'antonBrito@gmail.com', password: '123', admin: true)
 landlord.create(name: 'Ellen', address: '29 Phillips st', user_id: 1)
 comment.create(subject: 'She didnt care about her place', comment: 'too much blabla', landlord_id: 1, rate: 1)

@@ -10,8 +10,7 @@ class LandlordsController < OpenReadController
 
   def mylandlords
     @my_landlords = current_user.landlords
-
-    render json: @myLandlords
+    render json: @my_landlords
   end
 
   # GET /landlords/1
